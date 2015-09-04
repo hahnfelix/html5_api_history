@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <!---<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+ 
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/dhbwLogo.jpg"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Inhalt</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Allgemeines</li>
+        <li>Vorteile</li>
+        <li>Anwendung</li>
+        <li>Demo</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>HTML5 API History</h2>
+      <h3>Allgemeines</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Standard zum Manipulieren der Browser-History</li>
+        <li>Verwenden von JavaScript</li>
+        <li>In vorherigen Standards bereits vorhanden</li>
+        <ul> <li>Navigieren durch die Browser-History</li></ul>  
+        <li>Neu in diesem Standard</li>
+        <ul>  
+            <li>Einträge in die Browser-History hinzufügen</li>
+            <li>Die URL ändern, ohne die Seite neu laden zu müssen</li>
+            <li>Auslösen eines "Events" beim drücken des "Zurück"-Buttons des Browsers</li>
+        </ul>    
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorteile</h2>
+      <h3>Beispiel</h3>
+    </hgroup>
+    <article>
+      <img src="images/SeiteAundB.PNG">
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Vorteile</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Es können nur einzelne Bereiche einer Seite neu geladen werden</li>
+        <li>Einsparen von Ressourcen</li>  
+        <li>Dennoch lässt sich die URL so verändern, dass sie auf eine Seite mit dem aktuellen Stand zeigt</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Anwendung</h2>
+    </hgroup>
+    <article>
+        <ul>
+            <li>PushState</li>
+                <pre class="prettyprint" data-lang="javascript">
+                history.pushState(stateObj, title, URL);
+                </pre>
+            <li>ReplaceState</li>
+                <pre class="prettyprint" data-lang="javascript">
+                history.replaceState(stateObj, title, URL); 
+                </pre>
+            <li>In der Browser-History vor und zürück navigieren</li>
+                <pre class="prettyprint" data-lang="javascript">
+                window.history.back();
+                window.history.forward();
+                window.history.go(-/+ x);
+                </pre>
+        </ul>
+    </article>
+  </slide>
+    
+    <slide>
+    <hgroup>
+      <h2>Demo</h2>
+      <h3>Ändern des Inhaltes und anpassen der URL</h3>
+    </hgroup>
+    <article>
+        <ul>
+      <ul><a id="myLink3" href="#" onclick="javascript: history.pushState(null, null, 'neueURL');">URL ändern und in History einfügen</a></ul>
+      <ul><a id="myLink" href="#" onclick="javascript: window.history.back();">Folie zurück</a></ul>
+      <ul><a id="myLink2" href="#" onclick="javascript: window.history.forward();">Folie vorwärts</a></ul>
+        </ul>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Vielen Dank für eure Aufmerksamkeit!</h2>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/google_developers_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+   
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
